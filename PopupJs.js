@@ -4,26 +4,26 @@ class PopupJs {
     }
     popupJsModal() {
         const style = document.createElement("style");
-        style.innerHTML = `@media (max-width: 600px) { .model-box {width: 350px !important;}}`;
+        style.innerHTML = `.popupjs-modal-btn:hover{opacity:0.9}.@media (max-width: 600px) { .model-box {width: 350px !important;}}`;
         document.head.appendChild(style);
         this.modal = document.createElement("div");
         Object.assign(this.modal.style, { display: "none", position: "fixed", top: "0", left: "0", width: "100%", height: "100%", background: "rgba(0, 0, 0, 0.5)", justifyContent: "center", alignItems: "center", zIndex: "1000" });
         this.modal.innerHTML = `<div class="model-box" style="background: white; border-radius: 4px; text-align: left; width: 460px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); position: relative;">
-        <span style="position: absolute; top: 8px; right: 15px; font-size: 23px; cursor: pointer;" class="custom-modal-close"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15" height="15" viewBox="0 0 24 24">
+        <span style="position: absolute; top: 8px; right: 15px; font-size: 23px; cursor: pointer;" class="popupjs-modal-close"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15" height="15" viewBox="0 0 24 24">
         <path d="M 4.7070312 3.2929688 L 3.2929688 4.7070312 L 10.585938 12 L 3.2929688 19.292969 L 4.7070312 20.707031 L 12 13.414062 L 19.292969 20.707031 L 20.707031 19.292969 L 13.414062 12 L 20.707031 4.7070312 L 19.292969 3.2929688 L 12 10.585938 L 4.7070312 3.2929688 z"></path>
         </svg></span>
-        <span style='position: absolute; top: 12px; left: 15px; font-size: 16px;'class="custom-modal-title"></span>
-        <div style="display: flex ; align-items: center; gap: 10px; padding: 20px; margin-top: 30px;" class="custom-modal-body">
-        <div style="margin-top:5px" class="custom-modal-icon"></div>
-        <div class="custom-modal-message"></div>
+        <span style='position: absolute; top: 12px; left: 15px; font-size: 16px;'class="popupjs-modal-title"></span>
+        <div style="display: flex ; align-items: center; gap: 10px; padding: 20px; margin-top: 30px;" class="popupjs-modal-body">
+        <div style="margin-top:5px" class="popupjs-modal-icon"></div>
+        <div class="popupjs-modal-message"></div>
         </div>
         <div style="padding: 10px; background:#f2f2f2;border-top:1px solid #e2e2e2; text-align: right; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px;">
-        <button style="padding: 5px 25px; border: none; cursor: pointer; border:1px solid #0562b6; border-radius: 2px; background: #0562b6; color: white; margin-right: 2px;" class="custom-modal-btn confirm-btn">Ok</button>
-        <button style="padding: 5px 25px; border: none; cursor: pointer;  border:1px solid #e2e2e2; border-radius: 2px; background: #c9c9c9; color: black; margin-right: 2px; display: inline-block;" class="custom-modal-btn cancel-btn">Cancel</button>
+        <button style="padding: 5px 25px; border: none; cursor: pointer; border:1px solid #0562b6; border-radius: 2px; background: #0562b6; color: white; margin-right: 2px;" class="popupjs-modal-btn confirm-btn">Ok</button>
+        <button style="padding: 5px 25px; border: none; cursor: pointer;  border:1px solid #e2e2e2; border-radius: 2px; background: #c9c9c9; color: black; margin-right: 2px; display: inline-block;" class="popupjs-modal-btn cancel-btn">Cancel</button>
         </div>
         </div>`;
         document.body.appendChild(this.modal);
-        this.closeBtn = this.modal.querySelector(".custom-modal-close");
+        this.closeBtn = this.modal.querySelector(".popupjs-modal-close");
         this.confirmBtn = this.modal.querySelector(".confirm-btn");
         this.cancelBtn = this.modal.querySelector(".cancel-btn");
 
@@ -33,9 +33,9 @@ class PopupJs {
     }
 
     show({ title, message, type = "info", showCancel = false, onConfirm = null }) {
-        this.modal.querySelector(".custom-modal-title").innerHTML = `${title}`;
-        this.modal.querySelector(".custom-modal-message").innerHTML = `<p>${message}</p>`;
-        this.modal.querySelector(".custom-modal-icon").innerHTML = this.getIcon(type);
+        this.modal.querySelector(".popupjs-modal-title").innerHTML = `${title}`;
+        this.modal.querySelector(".popupjs-modal-message").innerHTML = `<p>${message}</p>`;
+        this.modal.querySelector(".popupjs-modal-icon").innerHTML = this.getIcon(type);
         this.modal.style.display = "flex";
 
         if (showCancel) {
