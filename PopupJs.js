@@ -3,10 +3,10 @@ class PopupJs {
         this.popupJsModal();
     }
     popupJsModal() {
+        this.modal = document.createElement("div");
         const style = document.createElement("style");
         style.innerHTML = `.popupjs-modal-btn:hover{opacity:0.9}.@media (max-width: 600px) { .model-box {width: 350px !important;}}`;
         document.head.appendChild(style);
-        this.modal = document.createElement("div");
         Object.assign(this.modal.style, { display: "none", position: "fixed", top: "0", left: "0", width: "100%", height: "100%", background: "rgba(0, 0, 0, 0.5)", justifyContent: "center", alignItems: "center", zIndex: "1000" });
         this.modal.innerHTML = `<div class="model-box" style="background: white; border-radius: 4px; text-align: left; width: 460px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); position: relative;">
         <span style="position: absolute; top: 8px; right: 15px; font-size: 23px; cursor: pointer;" class="popupjs-modal-close"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15" height="15" viewBox="0 0 24 24">
