@@ -34,7 +34,7 @@ class PopupJs {
 
     show({ title, message, type = "info", showCancel = false, onConfirm = null }) {
         this.modal.querySelector(".popupjs-modal-title").innerHTML = `${title}`;
-        this.modal.querySelector(".popupjs-modal-message").innerHTML = `<p>${message}</p>`;
+        this.modal.querySelector(".popupjs-modal-message").innerHTML = `<p style="margin:0px;padding:0px">${message}</p>`;
         this.modal.querySelector(".popupjs-modal-icon").innerHTML = this.getIcon(type);
         this.modal.style.display = "flex";
 
