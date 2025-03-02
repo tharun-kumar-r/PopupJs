@@ -5,7 +5,7 @@ class PopupJs {
     popupJsModal() {
         this.modal = document.createElement("div");
         const style = document.createElement("style");
-        style.innerHTML = `.popupjs-modal-btn:hover{opacity:0.9}.@media (max-width: 600px) { .model-box {width: 350px !important;}}`;
+        style.innerHTML = `.popupjs-modal-btn:hover{opacity:0.9} @media (max-width: 600px) { .model-box {width: 350px !important;}}`;
         document.head.appendChild(style);
         Object.assign(this.modal.style, { display: "none", position: "fixed", top: "0", left: "0", width: "100%", height: "100%", background: "rgba(0, 0, 0, 0.5)", justifyContent: "center", alignItems: "center", zIndex: "1000" });
         this.modal.innerHTML = `<div class="model-box" style="background: white; border-radius: 4px; text-align: left; width: 460px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); position: relative;">
