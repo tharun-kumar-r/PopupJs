@@ -8,8 +8,8 @@ class PopupJs {
         style.innerHTML = `.popupjs-modal-btn:hover{opacity:0.9} @media (max-width: 600px) { .model-box {width: 350px !important;}}`;
         document.head.appendChild(style);
         Object.assign(this.modal.style, { display: "none", position: "fixed", top: "0", left: "0", width: "100%", height: "100%", background: "rgba(0, 0, 0, 0.5)", justifyContent: "center", alignItems: "center", zIndex: "1000" });
-        this.modal.innerHTML = `<div class="model-box" style="background: white; border-radius: 4px; text-align: left; width: 460px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); position: relative;">
-        <span style="position: absolute; top: 8px; right: 15px; font-size: 23px; cursor: pointer;" class="popupjs-modal-close"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15" height="15" viewBox="0 0 24 24">
+        this.modal.innerHTML = `<div class="model-box" style="background: white; border-radius: 4px; text-align: left; width: 400px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); position: relative;">
+        <span style="position: absolute; top: 11px; right: 11px; font-size: 23px; cursor: pointer;" class="popupjs-modal-close"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15" height="15" viewBox="0 0 24 24">
         <path d="M 4.7070312 3.2929688 L 3.2929688 4.7070312 L 10.585938 12 L 3.2929688 19.292969 L 4.7070312 20.707031 L 12 13.414062 L 19.292969 20.707031 L 20.707031 19.292969 L 13.414062 12 L 20.707031 4.7070312 L 19.292969 3.2929688 L 12 10.585938 L 4.7070312 3.2929688 z"></path>
         </svg></span>
         <span style='position: absolute; top: 12px; left: 15px; font-size: 16px;'class="popupjs-modal-title"></span>
