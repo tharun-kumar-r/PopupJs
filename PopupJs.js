@@ -5,11 +5,11 @@ class PopupJs {
     popupJsModal() {
         this.modal = document.createElement("div");
         const style = document.createElement("style");
-        style.innerHTML = `.popupjs-modal-btn:hover{opacity:0.9} @media (max-width: 600px) { .model-box {width: 350px !important;}}`;
+        style.innerHTML = ` @media (max-width: 600px) { .model-box {width: 350px !important;}}`;
         document.head.appendChild(style);
         Object.assign(this.modal.style, { display: "none", position: "fixed", top: "0", left: "0", width: "100%", height: "100%", background: "rgba(0, 0, 0, 0.5)", justifyContent: "center", alignItems: "center", zIndex: "1000" });
         this.modal.innerHTML = `<div class="model-box" style="background: white; border-radius: 4px; text-align: left; width: 400px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); position: relative;">
-        <span style="position: absolute; top: 11px; right: 11px; font-size: 23px; cursor: pointer;" class="popupjs-modal-close"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15" height="15" viewBox="0 0 24 24">
+        <span style="position: absolute; top: 2px; right: 11px; font-size: 23px; cursor: pointer;" class="popupjs-modal-close"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15" height="15" viewBox="0 0 24 24">
         <path d="M 4.7070312 3.2929688 L 3.2929688 4.7070312 L 10.585938 12 L 3.2929688 19.292969 L 4.7070312 20.707031 L 12 13.414062 L 19.292969 20.707031 L 20.707031 19.292969 L 13.414062 12 L 20.707031 4.7070312 L 19.292969 3.2929688 L 12 10.585938 L 4.7070312 3.2929688 z"></path>
         </svg></span>
         <span style='position: absolute; top: 12px; left: 15px; font-size: 16px;'class="popupjs-modal-title"></span>
@@ -18,8 +18,8 @@ class PopupJs {
         <div class="popupjs-modal-message"></div>
         </div>
         <div style="padding: 10px; background:#f2f2f2;border-top:1px solid #e2e2e2; text-align: right; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px;">
-        <button style="padding: 5px 25px; border: none; cursor: pointer; border:1px solid #0562b6; border-radius: 2px; background: #0562b6; color: white; margin-right: 2px;" class="popupjs-modal-btn confirm-btn">Ok</button>
-        <button style="padding: 5px 25px; border: none; cursor: pointer;  border:1px solid #e2e2e2; border-radius: 2px; background: #c9c9c9; color: black; margin-right: 2px; display: inline-block;" class="popupjs-modal-btn cancel-btn">Cancel</button>
+        <button class="btn btn-primary border-0 pb-1 pt-1 confirm-btn">Ok</button>
+        <button class="btn pb-1 pt-1 cancel-btn">Cancel</button>
         </div>
         </div>`;
         document.body.appendChild(this.modal);
